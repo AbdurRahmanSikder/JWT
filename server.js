@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const router = require('./routes/userRoute.js')
 
-app.use('/', router);
+app.use('/api', router);
 
 
 
