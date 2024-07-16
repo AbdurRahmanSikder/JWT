@@ -9,8 +9,7 @@ const {registerValidator} = require('../helper/validation.js');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         const location = '../public/image';
-        // if (!fs.existsSync(location))
-        //     fs.mkdirSync(location);
+     
         if (file.mimetype === 'image/jpeg' || file.mimetype === "image/png")
             cb(null, path.join(__dirname, location));
     },
